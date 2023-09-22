@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: grafana
-  namespace: grafana
+  namespace: arkapps
 spec:
   project: default
   source:
@@ -15,6 +15,7 @@ spec:
       - values.grafana.yaml
   destination:
     server: 'https://kubernetes.default.svc'
+    namespace: grafana
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
