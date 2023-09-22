@@ -15,7 +15,6 @@ spec:
       - values.grafana.yaml
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: grafana
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
