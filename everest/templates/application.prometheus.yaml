@@ -8,14 +8,12 @@ spec:
   source:
     chart: prometheus
     repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 6.59.5
+    targetRevision: HEAD
     helm:
       releaseName: prometheus
-      valueFiles:
-      - values.prometheus.yaml
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: prometheus
+    namespace: arkapps
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
