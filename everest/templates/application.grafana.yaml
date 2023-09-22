@@ -14,7 +14,7 @@ spec:
       releaseName: grafana
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: arkapps
+    namespace: grafana
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
